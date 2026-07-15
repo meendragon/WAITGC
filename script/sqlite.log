@@ -1,0 +1,69 @@
+nohup: ignoring input
+============================================
+ sqlite 시작: Fri Jul 10 08:56:06 PM KST 2026   모드: 0 1 2 3
+============================================
+
+############# gc_mode=0 (greedy) - Fri Jul 10 08:56:06 PM KST 2026 #############
+Format...
+mke2fs 1.47.0 (5-Feb-2023)
+Creating filesystem with 1959715 4k blocks and 490560 inodes
+Filesystem UUID: 63887a5f-adee-423c-b539-88334cd5f7ac
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
+
+Allocating group tables:  0/60     done                            
+Writing inode tables:  0/60     done                            
+Creating journal (16384 blocks): done
+Writing superblocks and filesystem accounting information:  0/60     done
+
+Mount...
+Virt Ready
+  · end_virt
+✅ [greedy] 완료 - 150분 → /home/meen/IPSTEPGC/sqlite_logs/a_log/0_greedy.txt
+
+############# gc_mode=1 (cb) - Fri Jul 10 11:26:14 PM KST 2026 #############
+Format...
+mke2fs 1.47.0 (5-Feb-2023)
+Creating filesystem with 1959715 4k blocks and 490560 inodes
+Filesystem UUID: 72993c0d-c8a0-434d-b996-3bca553de098
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
+
+Allocating group tables:  0/60     done                            
+Writing inode tables:  0/60     done                            
+Creating journal (16384 blocks): done
+Writing superblocks and filesystem accounting information:  0/60     done
+
+Mount...
+Virt Ready
+  · end_virt
+✅ [cb] 완료 - 135분 → /home/meen/IPSTEPGC/sqlite_logs/a_log/1_cb.txt
+
+############# gc_mode=2 (wait) - Sat Jul 11 01:41:24 AM KST 2026 #############
+Format...
+mke2fs 1.47.0 (5-Feb-2023)
+Creating filesystem with 1959715 4k blocks and 490560 inodes
+Filesystem UUID: d271226d-5c46-4259-a9bd-7e1139ed76d8
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
+
+Allocating group tables:  0/60     done                            
+Writing inode tables:  0/60     done                            
+Creating journal (16384 blocks): done
+Writing superblocks and filesystem accounting information:  0/60     done
+
+Mount...
+Virt Ready
+  · end_virt
+✅ [wait] 완료 - 150분 → /home/meen/IPSTEPGC/sqlite_logs/a_log/2_wait.txt
+❌ 잘못된 mode: 3
+
+============================================
+ 🎉 종료: Sat Jul 11 04:12:20 AM KST 2026   총 7h 16m
+============================================
+total 968
+drwxrwxr-x 2 meen meen   4096 Jul 11 01:41 .
+drwxrwxr-x 3 meen meen   4096 Jul  6 19:21 ..
+-rw-rw-r-- 1 meen meen 330246 Jul 10 23:26 0_greedy.txt
+-rw-r--r-- 1 root root 300112 Jul 11 01:41 1_cb.txt
+-rw-r--r-- 1 root root 332043 Jul 11 04:12 2_wait.txt
