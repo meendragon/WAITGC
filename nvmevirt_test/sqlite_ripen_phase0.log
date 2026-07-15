@@ -1,0 +1,31 @@
+nohup: ignoring input
+============================================
+ sqlite 시작: Tue Jul  7 06:10:13 PM KST 2026   모드: 0
+============================================
+
+############# gc_mode=0 (greedy) - Tue Jul  7 06:10:13 PM KST 2026 #############
+Format...
+mke2fs 1.47.0 (5-Feb-2023)
+Creating filesystem with 1959715 4k blocks and 490560 inodes
+Filesystem UUID: 7fe44b56-cacc-4fb4-a138-3131ccd273e9
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
+
+Allocating group tables:  0/60     done                            
+Writing inode tables:  0/60     done                            
+Creating journal (16384 blocks): done
+Writing superblocks and filesystem accounting information:  0/60     done
+
+Mount...
+Virt Ready
+  · end_virt
+✅ [greedy] 완료 - 173분 → /home/meen/WAITGC/sqlite_logs/a_log/0_greedy.txt
+
+============================================
+ 🎉 종료: Tue Jul  7 09:03:26 PM KST 2026   총 2h 53m
+============================================
+total 672
+drwxrwxr-x 2 meen meen   4096 Jul  6 22:39 .
+drwxrwxr-x 3 meen meen   4096 Jul  6 19:21 ..
+-rw-rw-r-- 1 meen meen 361617 Jul  7 21:03 0_greedy.txt
+-rw-r--r-- 1 root root 304018 Jul  7 03:43 1_cb.txt
