@@ -1,0 +1,1 @@
+rm -rf /home/meen/WAITGC/script/fio_logs

@@ -1,0 +1,15 @@
+[global]
+filesize=5500M
+buffered=0
+ioengine=libaio
+
+[rand-write]
+filename=/home/meen/mnt/test.log
+rw=randwrite
+norandommap=1
+randrepeat=0
+bs=4K
+iodepth=1
+io_size=50G
+disable_clat=1
+disable_slat=1

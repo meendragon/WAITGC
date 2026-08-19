@@ -1,0 +1,11 @@
+[global]
+filesize=5500M
+buffered=0
+ioengine=libaio
+
+[seq-write]
+filename=/home/meen/mnt/test.log
+rw=write
+bs=256K
+iodepth=32
+io_size=5G

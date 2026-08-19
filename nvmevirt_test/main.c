@@ -73,13 +73,6 @@ static unsigned int io_unit_shift = 12;
 static char *cpus;
 static unsigned int debug = 0;
 
-/*MN Start*/
-uint gc_policy = GC_GREEDY;
-module_param(gc_policy, uint, 0644);
-MODULE_PARM_DESC(gc_policy, "GC victim policy: 0=greedy, 1=cost-benefit_linear, 2=cost-benefit_step, 3=IP-STEP GC");
-/*MN End*/
-
-
 int io_using_dma = false;
 
 static int set_parse_mem_param(const char *val, const struct kernel_param *kp)

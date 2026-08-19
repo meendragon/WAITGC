@@ -1,0 +1,13 @@
+[global]
+filesize=4G
+buffered=0
+ioengine=libaio
+
+[rand-read]
+filename=/home/meen/mnt/test.log
+rw=randread
+bs=4K
+iodepth=32
+io_size=16G
+disable_clat=1
+disable_slat=1
